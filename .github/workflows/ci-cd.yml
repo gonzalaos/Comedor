@@ -80,7 +80,7 @@ jobs:
         id: meta-backend
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/algohoot-backend
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/comedor-backend
           tags: |
             type=ref,event=branch
             type=sha,prefix={{branch}}-
@@ -90,7 +90,7 @@ jobs:
         id: meta-frontend
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/algohoot-frontend
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/comedor-frontend
           tags: |
             type=ref,event=branch
             type=sha,prefix={{branch}}-
@@ -100,7 +100,7 @@ jobs:
         id: meta-ingress
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/algohoot-ingress
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/comedor-ingress
           tags: |
             type=ref,event=branch
             type=sha,prefix={{branch}}-
