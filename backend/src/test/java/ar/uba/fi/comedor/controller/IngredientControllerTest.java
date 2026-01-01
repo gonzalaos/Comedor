@@ -55,6 +55,6 @@ public class IngredientControllerTest {
             .andExpect(jsonPath("$.name").value("Leche"))
             .andExpect(jsonPath("$.quantity").value(10L))
             .andExpect(jsonPath("$.minQuantity").value(1L))
-            .andExpect(jsonPath("$.unitOfMeasure").value("Litros"));
+            .andExpect(jsonPath("$.unitOfMeasure").value("Liters"));
     }
 }
