@@ -1,0 +1,24 @@
+:root {
+  --primary: #2563eb;       /* Azul */
+  --primary-hover: #1d4ed8;
+  --bg-page: #f8fafc;       /* Gris muy claro */
+  --bg-card: #ffffff;
+  --text-main: #1e293b;     /* Gris oscuro */
+  --text-secondary: #64748b;
+  --border: #e2e8f0;
+  --danger: #ef4444;
+  --radius: 0.5rem;         /* 8px */
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+}

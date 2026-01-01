@@ -1,0 +1,26 @@
+import { type InputHTMLAttributes, forwardRef } from 'react';
+import './Input.css';
+
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  label: string;
+  error?: string;
+}
+
+// Usamos forwardRef para que funcione con React Hook Form
+export const Input = forwardRef<HTMLInputElement, InputProps>(
+  ({ label, error, className, ...props }, ref) => {
+    return (
+      <div className={`input-wrapper ${className || ''}`}>
+        <label className="input-label">
+          {label}
+        </label>
+        <input
+          ref={ref}
+          className={`input-field ${error ? 'input-error' : ''}`}
+          {...props}
+        />
+        {error && <span className="input-error-msg">{error}</span>}
+      </div>
+    );
+  }
+);
